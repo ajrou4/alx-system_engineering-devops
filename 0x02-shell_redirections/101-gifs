@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 find . -type f -name "*.gif" | while read file; do
   filename=$(basename "$file" ".gif")
   echo "$filename"
