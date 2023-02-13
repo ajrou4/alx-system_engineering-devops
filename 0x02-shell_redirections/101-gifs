@@ -1,6 +1,4 @@
 #!/bin/bash
-find . -type f -name "*.gif" | while read file; do
-  filename=$(basename "$file" ".gif")
-  echo "$filename"
-done | sort -f | awk '{print $0}'
-echo ""
+find . -type f -name "*.gif" -print | while read file; do
+  echo $(basename "${file%.*}") | LC_ALL=C sort
+done
