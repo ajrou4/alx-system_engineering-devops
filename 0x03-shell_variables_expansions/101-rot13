@@ -1,2 +1,8 @@
 #!/bin/bash
-tr 'A-Za-z' 'N-ZA.Mn-za-m'
+encoded=$(echo "$text" | tr 'A-Za-z' 'N-ZA-Mn-za-m')
+
+# Print the encoded text
+echo "Encoded text: $encoded"
+
+# Decode the text using Rot13
+decoded=$(echo "$encoded" | tr 'A-Za-z' 'N-ZA-Mn-za-m')
